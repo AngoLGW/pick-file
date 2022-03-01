@@ -11,13 +11,11 @@
     <script src="../src/index.js"></script>
     <script>
       async function test() {
-        pickFile({ multiple: true, maxNum: 5 })
-          .then((res) => {
+        pickFile({ multiple: true, accept: "image/gif,image/png" }).then(
+          (res) => {
             console.log(res);
-          })
-          .catch((error) => {
-            alert(error);
-          });
+          }
+        );
       }
     </script>
   </body>
