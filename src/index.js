@@ -1,4 +1,5 @@
-function pickFile() {
+function pickFile(params = {}) {
+  let { multiple, accept } = params;
   return new Promise((resolve, reject) => {
     let input = document.createElement("input");
     input.setAttribute("type", "file");
@@ -9,32 +10,9 @@ function pickFile() {
 
     function listener(e) {
       console.log(e);
-      if (multiple) {
-        let files = e.path[0].files;
-        files = Array.from(files);
-        resolve(
-          files.map((file) => {
-            return {
-              file,
-              property: {
-                name: file.name,
-                size: file.size,
-                type: file.type,
-              },
-            };
-          })
-        );
-      } else {
-        let file = e.path[0].files[0];
-        resolve({
-          file,
-          property: {
-            name: file.name,
-            size: file.size,
-            type: file.type,
-          },
-        });
-      }
+      let files = e.path[0].files;
+      files = Array.from(files);
+      resolve(files);
 
       input.removeEventListener("change", listener);
       input = null;
