@@ -6,6 +6,16 @@
 
 ### example
 
+1. 不传参数
+
+```javascript
+pickFile().then((res) => {
+  console.log(res);
+});
+```
+
+2. 传参数
+
 ```javascript
 pickFile({ multiple: true, accept: "image/gif,image/png" }).then((res) => {
   console.log(res);
