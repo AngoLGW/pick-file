@@ -6,20 +6,26 @@ js 实现选择文件的功能
 
 ### example
 
-1. 不传参数
+1. 模块导入
 
 ```javascript
+import pickFile from "pick-file";
+
 pickFile().then((res) => {
   console.log(res);
 });
 ```
 
-2. 传参数
+2.script 引入
 
 ```javascript
-pickFile({ multiple: true, accept: "image/gif,image/png" }).then((res) => {
-  console.log(res);
-});
+<script src="dist/pick-file.js"></script>;
+
+pickFile
+  .default({ multiple: true, accept: "image/gif,image/png" })
+  .then((res) => {
+    console.log(res);
+  });
 ```
 
 ### params

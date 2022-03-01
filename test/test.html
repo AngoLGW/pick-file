@@ -8,14 +8,14 @@
   </head>
   <body>
     <button onclick="test()">选择上传文件</button>
-    <script src="../src/index.js"></script>
+    <script src="../dist/pick-file.js"></script>
     <script>
       async function test() {
-        pickFile({ multiple: true, accept: "image/gif,image/png" }).then(
-          (res) => {
+        pickFile
+          .default({ multiple: true, accept: "image/gif,image/png" })
+          .then((res) => {
             console.log(res);
-          }
-        );
+          });
       }
     </script>
   </body>

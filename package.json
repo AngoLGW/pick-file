@@ -1,12 +1,29 @@
 {
   "name": "pick-file",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "pick file for javascript",
+  "keywords": [
+    "select",
+    "file",
+    "web"
+  ],
+  "author": "Ango",
+  "main": "dist/pick-file.umd.js",
+  "module": "dist/pick-file.es.js",
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "rimraf dist && rollup -c",
+    "test": "npm run build && open-cli test/test.html"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "devDependencies": {
+    "open-cli": "^7.0.1",
+    "rollup": "^2.68.0",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-sourcemaps": "^0.6.3",
+    "rollup-plugin-typescript2": "^0.31.2",
+    "typescript": "^4.6.2"
+  }
 }
