@@ -14,7 +14,7 @@ pickFile({ multiple: true, accept: "image/gif,image/png" }).then((res) => {
 
 ### params
 
-| 功能 | 参数 | 默认值 |
-| :----：| :------: | :----: |
-| 是否文件可多选 | multiple | false |
-| 可选择的文件 | accept | 空 |
+|      功能      |   参数   | 默认值 |
+| :------------: | :------: | :----: |
+| 是否文件可多选 | multiple | false  |
+|  可选择的文件  |  accept  |   空   |
