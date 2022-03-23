@@ -1,6 +1,6 @@
 {
-  "name": "pick-file",
-  "version": "1.0.0",
+  "name": "@lingw/pick-file",
+  "version": "1.0.1",
   "description": "pick file for javascript",
   "keywords": [
     "select",
@@ -13,6 +13,11 @@
   "files": [
     "dist"
   ],
+  "homepage": "https://github.com/AngoLGW/pick-file",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AngoLGW/pick-file"
+  },
   "scripts": {
     "build": "rimraf dist && rollup -c",
     "test": "npm run build && open-cli test/test.html"

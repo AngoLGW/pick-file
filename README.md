@@ -16,7 +16,7 @@ pickFile().then((res) => {
 });
 ```
 
-2.script 引入
+2. script 引入
 
 ```javascript
 <script src="dist/pick-file.js"></script>;
