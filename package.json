@@ -1,6 +1,6 @@
 {
   "name": "@lingw/pick-file",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "pick file for javascript",
   "keywords": [
     "select",
@@ -20,7 +20,8 @@
   },
   "scripts": {
     "build": "rimraf dist && rollup -c",
-    "test": "npm run build && open-cli test/test.html"
+    "test": "npm run build && open-cli test/test.html",
+    "prepublish": "npm run build"
   },
   "devDependencies": {
     "open-cli": "^7.0.1",

@@ -16,7 +16,7 @@ export function pickFile<T>(params: Attribute = {}): Promise<T> {
 
     function listener(e: any) {
       console.log(e);
-      let files = e.path[0].files;
+      let files = e.target.files;
       files = Array.from(files);
       resolve(files);
 
